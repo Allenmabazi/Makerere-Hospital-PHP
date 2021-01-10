@@ -1,0 +1,44 @@
+
+<!--THESE CODES SEND MAIL TO SERVICE AGENT -->
+<form  class="mail-sent" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<button name="get-btn3" class="sale3">CONTACT SERVICE AGENT</button>
+<br><br>
+
+
+<?php
+
+if (isset($_POST['get-btn3'])) {
+
+    echo'
+    <div>
+<form  class=" allenah" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+<h4>Contact Service Agent for Emergency:</h4><br>
+Your E-mail: <br><input type="text" name="email"><br><br>
+Subject: <br><input type="text" name="subject"><br>
+Contact messages: <br><br><textarea name="messages" rows="5" cols="35"></textarea><br><br>
+<input type="submit" value="Submit" name="send-conta" class="button-sent"><br><br>
+<a href="service.php"><button>Cancel</button></a>
+</form>
+</div>
+    ';
+}
+
+if (isset($_POST['send-conta'])) {
+
+    $mailFrom =$_POST['email'];
+    $subject =$_POST['subject'];
+    $message =$_POST['messages'];
+
+    $mailTo = "hospital.agent@gmail.com";
+    $headers = "From: ".$mailFrom;
+    $text ="You have received an emergency contact email from: ". $mail."\n\n". $message;
+    mail( $mailTo, $subject, $text,$headers );
+   
+    header("Location: service.php? mail=Successfully sent".$mailTo);
+} 
+
+
+
+?>
+<br>
+</form> 

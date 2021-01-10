@@ -1,0 +1,29 @@
+1:  CREATE DATABASE mak-hospital;
+
+2: CREATE TABLE users (
+    uid int(10) auto_increment primary key,
+    fname varchar(200),
+    lname varchar(200),
+    user_mail varchar(200),
+    passwd varchar(200)
+);
+
+
+INSERT INTO users (fname, lname, user_mail, passwd) VALUES('allen', 'mbabazi', 'allenmbabzi@gmail.com', '123Allen')
+
+
+3: CREATE TABLE clients (
+    c_id int(10) auto_increment primary key,
+    fullname varchar(200),
+    email varchar(200),
+    contact int(10),
+    place varchar(200),
+    services varchar(200),
+    paid_plan varchar(200),
+    amount int(16),
+    cont_personel varchar(200),
+    telephonet int(10)
+);
+
+
+INSERT INTO clients (fullname, email, contact, place, services, paid_plan, amount, cont_personel, telephone) VALUES ('Harriet Namungo', 'namungahari@gmail.com', 0706567830, 'Nansana', 'Medication', 'By Instalment', 70000, 'Kalema', 0753456672)

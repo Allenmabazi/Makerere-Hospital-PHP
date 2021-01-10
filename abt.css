@@ -1,0 +1,84 @@
+.mos{
+    background-color: antiquewhite;
+    color: rgb(1, 9, 15);
+    padding: 2%;
+}
+.mail-sent{
+background-color: rgb(241, 215, 180);
+padding: 2%;
+width: 80%;
+text-align: left;
+color: rgb(8, 8, 8);
+}
+.button-sent{
+    background-color:skyblue;
+    color:white;
+    padding:4px;
+    height: 40px;
+}
+textarea{
+    color: rgb(1, 1, 8);
+    background-color: rgba(169, 169, 169, 0.425);
+}
+button{
+   
+    height: 30px;
+    background-color: rgb(6, 114, 6);
+    color: rgb(247, 245, 245);
+}
+.button{
+    border-radius: 0;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(20, 49, 180);
+    color: rgb(247, 245, 245);
+}
+.semi-container{
+    display: list-item;
+}
+.sale2{
+    height: 30px;
+    background-color: rgb(14, 202, 14);
+    color: rgb(243, 239, 239);
+}
+.sale2{
+    height: 30px;
+    background-color: rgb(202, 120, 14);
+    color: rgb(255, 253, 253);
+}
+select{
+    background-color: rgba(6, 151, 151, 0.808);
+    color: rgb(247, 247, 247);
+}
+option{
+    background-color: rgba(48, 46, 43, 0.623);
+    color: oldlace;
+}
+.allen{
+    float: left;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    width: 100%;
+    background-color: cornsilk;
+    border: crimson solid 1px;
+    padding: 2%;
+
+}
+.allen .title-table{
+    background-color: brown;
+    color: cornsilk;
+    text-align: center;
+}
+.allen tr .tab{
+    background-color: darkblue;
+    color: rgb(250, 249, 249);
+}
+.allen td{
+    width: fit-content;
+    color: black;
+}
+.allenah{
+    background-color: blanchedalmond;
+    padding: 2%;
+    text-align: left;
+}

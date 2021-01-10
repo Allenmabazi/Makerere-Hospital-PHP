@@ -1,0 +1,63 @@
+<form  class="mail-sent" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<button name="get-btn2" class="sale2">VIEW SERVICE REQUESTS</button>
+<br><br>
+
+<?php
+/*** retrieve data from clients table */
+
+
+if (isset($_POST['get-btn2'])) {
+
+  echo'
+  <table class="allen">
+<tr class="title-table"><td colspan="10" ><B>CLIENTS REQUEST / SERVICES</B></td></tr>
+<tr>
+<td class="tab">Clients-ID</td>
+<td class="tab">Full Name</td>
+<td class="tab">Email </td>
+<td class="tab">Contact</td>
+<td class="tab">Resident</td>
+<td class="tab">Requested Service</td>
+<td class="tab">payment Term </td>
+<td class="tab">Amount</td>
+<td class="tab">Contact Person </td>
+<td class="tab">Tel/Contact</td>
+</tr>
+  ';
+
+  require "mak.php";
+if (!$conn) {
+die("connection to database failed!");
+}
+$sql = "SELECT c_id, fullname,email, contact, place, services, paid_plan, amount, cont_personel, telephone FROM clients";
+$results = $conn->query($sql);
+
+if ($results->num_rows > 0) {
+    while ($row = $results-> fetch_assoc()) {
+       echo" 
+       <tr>
+       <td>" .$row['c_id'] ."</td>
+       <td>" .$row['fullname'] ."</td>
+       <td>" .$row['email'] ."</td>
+       <td>" .$row['contact'] ."</td>
+       <td>" .$row['place'] ."</td>
+       <td>" .$row['services'] ."</td>
+       <td>" .$row['paid_plan'] ."</td>
+       <td>" .$row['amount'] ."</td>
+       <td>" .$row['cont_personel'] ."</td>
+       <td>" .$row['telephone'] ."</td>
+       </tr>";
+      
+    }
+    echo"</table>";
+     echo" <a href='service.php'><button>HIDE TABLE</button></a>";
+}
+else{
+    echo"No Results form table!.";
+}
+}
+
+?>
+</table>
+
+</form>  
